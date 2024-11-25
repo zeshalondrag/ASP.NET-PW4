@@ -1,0 +1,21 @@
+﻿    @model IEnumerable<SORAPC.Models.Catalog>
+
+@{
+    ViewData["Title"] = "Игровые компьютеры";
+    var filteredModel = Model.Where(i => i.CategoryId == 1);
+}
+
+<div class="gaming-pcs-container">
+    <h2>Оптимальные. Идеальный баланс цены и производительности.</h2>
+     @foreach (var i in filteredModel)
+     {
+         <div class="gaming-pc-card">
+             <img src="@i.ImageUrl" alt="null">
+             <h3>@i.Names</h3>
+             <p class="price">Цена @i.Price.ToString("N0") ₽</p>
+             <p>@i.Descriptions</p>
+             <button class="btn config-btn">КОНФИГУРАТОР</button>
+             <a asp-action="Details" asp-route-id="@i.IdCatalog" class="btn details-btn">ПОДРОБНЕЕ</a>
+         </div>
+     }
+</div>

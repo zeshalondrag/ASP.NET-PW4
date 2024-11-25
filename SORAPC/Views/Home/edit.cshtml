@@ -1,0 +1,84 @@
+﻿@model SORAPC.Models.Catalog
+@{
+    ViewBag.Title = "Редактирование продукта";
+}
+<h2 style="color: #FFF; margin-bottom: 20px; text-align:center;">Редактирование - @Model.Names</h2>
+
+<form asp-action="Edit" class="edit-form" style="color: white; max-width: 600px; margin: auto;">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdCatalog" />
+
+    <div class="form-group">
+        <label asp-for="ImageUrl" class="control-label">Ссылка на изображения</label>
+        <input type="url" asp-for="ImageUrl" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Names" class="control-label">Название</label>
+        <input type="text" asp-for="Names" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price" class="control-label">Цена</label>
+        <input type="number" asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descriptions" class="control-label">Описание</label>
+        <input type="text" asp-for="Descriptions" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryId" class="control-label">Категория</label>
+        <select asp-for="CategoryId" class="form-control">
+            <option value="1">Игровые компьютеры</option>
+            <option value="2">Рабочие станции</option>
+            <option value="3">Сервера</option>
+        </select>
+    </div>
+
+    <div class="form-group d-flex center" style="margin-left: 15%">
+        <input type="submit" value="Сохранить" class="btn btn-default" />
+        @if (ViewBag.CategoryId == 1)
+        {
+            <a asp-action="gamingpc" class="btn btn-default">Назад</a>
+        }
+        else if (ViewBag.CategoryId == 2)
+        {
+            <a asp-action="workstation" class="btn btn-default">Назад</a>
+        }
+        else if (ViewBag.CategoryId == 3)
+        {
+            <a asp-action="server" class="btn btn-default">Назад</a>
+        }
+        else
+        {
+            <a asp-action="Index" class="btn btn-default">Назад</a>
+        }
+    </div>
+</form>
+
+<style>
+    .edit-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .edit-form .form-control {
+        background-color: #2b2b2b;
+        color: #FFF;
+        border: 1px solid #5a5a5a;
+    }
+
+    .edit-form .form-control:focus {
+        background-color: #3b3b3b;
+        border-color: #999;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .justify-content-between {
+        justify-content: center;
+    }
+</style>

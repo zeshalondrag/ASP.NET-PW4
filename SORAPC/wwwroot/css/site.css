@@ -1,0 +1,375 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color: #111;
+    margin-bottom: 60px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #202020;
+    border-radius: 30px;
+    width: 49%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.config-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center; 
+}
+
+    .card img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .card h3 {
+        margin-top: 15px;
+        font-size: 1.5em;
+    }
+
+    .card p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+.btn {
+    background-color: #ccff00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 200px;
+    margin-left: 4.2%;
+}
+
+    .btn:hover {
+        background-color: #99cc00;
+    }
+
+.config-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bottom-img {
+    margin-top: auto;
+}
+
+.bg-dark-custom {
+    background-color: #191a1b !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #ccff00 !important; 
+    }
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+.gaming-pcs-container {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gaming-pc-card {
+    background-color: #191a1b;
+    border-radius: 20px;
+    display: inline-block;
+    width: 40%;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #cccccc;
+}
+
+    .gaming-pc-card img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .gaming-pc-card h3 {
+        font-size: 32px;
+        color: #fff;
+        margin: 10px 0;
+    }
+
+    .gaming-pc-card .price {
+        font-size: 22px;
+        font-weight: bold;
+        color: #ccff00;
+        margin-bottom: 10px;
+    }
+
+    .gaming-pc-card p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #cccccc;
+    }
+
+.btn {
+    background-color: #ccff00;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.config-btn {
+    background-color: #ccff00;
+}
+
+.details-btn {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.btn:hover {
+    background-color: #99cc00;
+    color: #000;
+}
+
+.workstations-container {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.workstation-card {
+    background-color: #191a1b;
+    border-radius: 20px;
+    display: inline-block;
+    width: 40%;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #cccccc;
+}
+
+    .workstation-card img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .workstation-card h3 {
+        font-size: 32px;
+        color: #fff;
+        margin: 10px 0;
+    }
+
+    .workstation-card .price {
+        font-size: 22px;
+        font-weight: bold;
+        color: #ccff00;
+        margin-bottom: 10px;
+    }
+
+    .workstation-card p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #cccccc;
+    }
+
+.btn {
+    background-color: #ccff00;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.config-btn {
+    background-color: #ccff00;
+}
+
+.details-btn {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.btn:hover {
+    background-color: #99cc00;
+    color: #000;
+}
+
+.servers-container {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.server-card {
+    background-color: #222;
+    border-radius: 30px;
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #cccccc;
+}
+
+    .server-card img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .server-card h3 {
+        font-size: 24px;
+        color: #fff;
+        margin: 10px 0;
+    }
+
+    .server-card ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 15px;
+    }
+
+        .server-card ul li {
+            font-size: 14px;
+            color: #999;
+        }
+
+.btn {
+    background-color: #ccff00;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.inquire-btn:hover {
+    background-color: #99cc00;
+}
+
+.services-container {
+    text-align: left;
+    color: #ffffff;
+    padding: 30px;
+    width: 100%; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; 
+}
+
+h2 {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    grid-column: span 2; 
+}
+
+.service-card {
+    background-color: #222;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+    .service-card:hover {
+        transform: scale(1.05); 
+    }
+
+    .service-card img {
+        width: 50%;
+        border-radius: 15px;
+        margin-right: 20px;
+    }
+
+.service-info {
+    color: #cccccc;
+}
+
+    .service-info h3 {
+        font-size: 20px;
+        color: #fff;
+        margin: 0;
+        padding-bottom: 5px;
+    }
+
+    .service-info p {
+        font-size: 14px;
+        color: #999;
+    }

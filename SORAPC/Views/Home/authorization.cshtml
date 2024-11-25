@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Авторизация";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #191a1b;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #ccff00;
+            border: none;
+            color: #111;
+        }
+
+            .btn-primary:hover {
+                background-color: #b3e600;
+            }
+
+        .text-primary {
+            color: #ccff00 !important;
+        }
+
+        a.text-primary:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(94vh - 100px);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="card shadow-lg rounded-lg p-4">
+            <div class="card-header text-center">
+                <h2 class="text-center font-weight-bold text-primary">Авторизация</h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="email" class="font-weight-bold">Email:</label>
+                        <input name="email" type="email" required class="form-control" id="email" placeholder="Введите email">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="password" class="font-weight-bold">Пароль:</label>
+                        <input name="password" type="password" required class="form-control" id="passwords" placeholder="Введите пароль">
+                    </div>
+                    <div class="form-group">
+                        <br />
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block rounded-pill font-weight-bold">Авторизоваться</button>
+                </form>
+                @if (ViewBag.ErrorMessage == null)
+                {
+                    @ViewBag.ErrorMessage
+                    ;
+                }
+                <div class="text-center mt-3">
+                    <a asp-action="registration" asp-controller="Home" class="text-primary">Нет аккаунта? Зарегестрируйтесь!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

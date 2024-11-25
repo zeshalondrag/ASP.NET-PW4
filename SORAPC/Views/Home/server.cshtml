@@ -1,0 +1,21 @@
+﻿@model IEnumerable<SORAPC.Models.Catalog>
+
+@{
+    ViewData["Title"] = "Серверы";
+
+    var filteredModel = Model.Where(i => i.CategoryId == 3);
+}
+
+<div class="servers-container">
+    <h2>SORAPC FORCE</h2>
+    <p>Наши серверы разработаны для обеспечения стабильной работы как простых приложений, так и сложных вычислительных задач. Базовые модели идеально подходят для веб-сервисов и хранения данных, а мощные решения предоставляют высокую производительность для виртуализации, аналитики и AI. Мы поддержим конфигурацию, учитывая потребности вашего бизнеса, чтобы обеспечить максимальную эффективность и надежность.</p>
+    @foreach (var i in filteredModel)
+    {
+        <div class="server-card">
+            <img src="@i.ImageUrl" alt="null">
+            <h3>@i.Names</h3>
+            <p>@i.Descriptions</p>
+            <button class="btn inquire-btn">ЗАПРОСИТЬ ЦЕНУ</button>
+        </div>
+    }
+</div>

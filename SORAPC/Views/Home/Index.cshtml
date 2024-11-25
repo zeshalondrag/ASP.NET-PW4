@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Интернет-магазин компьютеров SORAPC";
+}
+
+<div class="card-container">
+    <div class="card">
+        <h3>Игровые компьютеры</h3>
+        <p>Компьютеры для геймеров</p>
+        <a asp-action="gamingpc" class="btn details-btn">ПОДРОБНЕЕ</a>
+        <img src="https://hyperpc.ru/images/content/main/hyperpc-gaming-pc.webp?10" alt="Игровые компьютеры" />
+    </div>
+
+    <div class="card">
+        <h3>Рабочие станции</h3>
+        <p>Решения для профессионалов</p>
+        <a asp-action="workstation" class="btn details-btn">ПОДРОБНЕЕ</a>
+        <img class="bottom-img" src="https://hyperpc.ru/images/content/main/hyperpc-workstation.webp?10" alt="Рабочие станции" />
+    </div>
+
+    <div class="card">
+        <h3>Компьютеры в наличии</h3>
+        <p>С доставкой сегодня</p>
+        <button class="btn">ПОДРОБНЕЕ</button>
+        <img src="https://hyperpc.ru/images/content/main/hyperpc-gaming-pc-alt.webp" alt="Компьютеры в наличии" />
+    </div>
+
+    <div class="card">
+        <h3>Конфигуратор</h3>
+        <p>Подобрать компьютер или собрать свой</p>
+        <div class="config-buttons">
+            <button class="btn">По задачам</button>
+            <button class="btn">По конфигурации</button>
+        </div>
+        <img class="bottom-img" src="https://hyperpc.ru/images/content/main/hyperpc-configurator-alt.webp" alt="Конфигуратор" />
+    </div>
+</div>

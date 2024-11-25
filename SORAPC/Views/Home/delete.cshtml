@@ -1,0 +1,54 @@
+﻿@model SORAPC.Models.Catalog
+@{
+    ViewBag.Title = "Удаление продукта";
+    var categories = new Dictionary<int, string>
+    {
+        { 1, "Игровые компьютеры" },
+        { 2, "Рабочие станции" },
+        { 3, "Сервера" }
+    };
+    var categoryName = categories.ContainsKey(Model.CategoryId ?? 0)
+        ? categories[Model.CategoryId ?? 0]
+        : "Неизвестная категория";
+}
+<h2>@Model.Names</h2>
+<div style="color: white">
+    <dl class="dl-horizontal">
+        <img src="@Model.ImageUrl" />
+
+        <dt>Цена</dt>
+        <dd>@Model.Price.ToString("N0") ₽</dd>
+
+        <dt>Категория</dt>
+        <dd>@categoryName</dd>
+
+        <dt>Описание</dt>
+        <dd>@Model.Descriptions</dd>
+    </dl>
+
+    <div>
+        <form asp-controller="Home" asp-action="Delete" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    @if (ViewBag.CategoryId == 1)
+    {
+        <a asp-action="gamingpc" class="btn btn-default">Назад</a>
+    }
+    else if (ViewBag.CategoryId == 2)
+    {
+        <a asp-action="workstation" class="btn btn-default">Назад</a>
+    }
+    else if (ViewBag.CategoryId == 3)
+    {
+        <a asp-action="server" class="btn btn-default">Назад</a>
+    }
+    else
+    {
+        <a asp-action="Index" class="btn btn-default">Назад</a>
+    }
+</div>
